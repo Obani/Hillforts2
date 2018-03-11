@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.card_hillforts.view.*
 import ie.app.william.hillforts.R
 import ie.app.william.hillforts.helpers.readImageFromPath
 import ie.app.william.hillforts.models.HillfortModel
-import kotlinx.android.synthetic.main.activity_main.view.*
+
 
 interface HillfortListener {
     fun onHillfortClick(hillforts: HillfortModel)
@@ -39,13 +39,13 @@ class HillfortAdapter constructor(private var hillforts: List<HillfortModel>,
     }
 
 
-    interface HillfortListener {
+    /*interface HillfortListener {
         fun onHillfortClick(hillfort: HillfortModel)
         fun onHillfortLongClick(hillfort: HillfortModel)
 
     }
 
-    /*itemView.setOnLongClickListener {
+    itemView.setOnLongClickListener {
         listener.onHillfortLongClick(hillfort); true
     }
 

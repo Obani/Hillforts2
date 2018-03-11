@@ -32,6 +32,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.app.william.hillforts.activities.MainActivity" />
         </activity>
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name=".activities.HillfortsMapActivity"
             android:label="@string/title_activity_hillforts_map"

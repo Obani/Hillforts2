@@ -15,6 +15,7 @@ import org.jetbrains.anko.startActivityForResult
 import ie.app.william.hillforts.R
 import ie.app.william.hillforts.main.MainApp
 import ie.app.william.hillforts.models.HillfortModel
+import org.jetbrains.anko.startActivity
 
 class HillfortListActivity : AppCompatActivity(), HillfortListener {
 
@@ -57,12 +58,11 @@ class HillfortListActivity : AppCompatActivity(), HillfortListener {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.item_add -> startActivityForResult<MainActivity>(200)
-            R.id.item_map -> startActivity<HillfortsMapActivity>()
         }
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onHillfortClick(hillfort: HillfortModel) {
-        startActivityForResult(intentFor<MainActivity>().putExtra("hillfort_edit", hillfort), 201)
+    override fun onHillfortClick(hillforts: HillfortModel) {
+        startActivityForResult(intentFor<MainActivity>().putExtra("hillfort_edit", hillforts), 201)
     }
 }
