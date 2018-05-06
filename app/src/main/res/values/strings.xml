@@ -15,4 +15,5 @@
     <string name="google_maps_key"> AIzaSyByphmOryrkFiD2SHgsjyTvV9A6spYlGXE </string>
     <string name="title_activity_hillforts_map">string</string>
     <string name="title_activity_hillfort_maps">Map of All Hillforts</string>
+    <string name="menu_saveHillfort">Save</string>
 </resources>
