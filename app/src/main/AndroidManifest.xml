@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.HillfortListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,10 +32,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.app.william.hillforts.activities.MainActivity" />
         </activity>
-        <!--suppress AndroidDomInspection -->
+        <!-- suppress AndroidDomInspection -->
         <activity
             android:name=".activities.HillfortsMapActivity"
             android:label="@string/title_activity_hillforts_map"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.HillfortMapsActivity"
+            android:label="@string/title_activity_hillfort_maps"
             android:theme="@style/AppTheme"></activity>
     </application>
 

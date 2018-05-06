@@ -15,7 +15,7 @@ interface HillfortListener {
 }
 
 class HillfortAdapter constructor(private var hillforts: List<HillfortModel>,
-                                   private val listener: HillfortListener) : RecyclerView.Adapter<HillfortAdapter.MainHolder>() {
+                                  private val listener: HillfortListener) : RecyclerView.Adapter<HillfortAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MainHolder {
         return MainHolder(LayoutInflater.from(parent?.context).inflate(R.layout.card_hillforts, parent, false))
@@ -42,22 +42,17 @@ class HillfortAdapter constructor(private var hillforts: List<HillfortModel>,
     /*interface HillfortListener {
         fun onHillfortClick(hillfort: HillfortModel)
         fun onHillfortLongClick(hillfort: HillfortModel)
-
     }
-
     itemView.setOnLongClickListener {
         listener.onHillfortLongClick(hillfort); true
     }
-
     override fun onHillfortLongClick(hillfort: HillfortModel) {
         app.hillforts.delete(hillfort)
         loadHillforts()
     }
-
     override fun onHillfortLongClick(hillfort: HillfortModel) {
         val title = ctx.getString(R.string.dialog_title_delete)
         val message = ctx.getString(R.string.dialog_desc_delete)
-
         alert(message, title) {
             positiveButton(ctx.getString(android.R.string.ok)) {
                 app.hillforts.delete(hillfort)
